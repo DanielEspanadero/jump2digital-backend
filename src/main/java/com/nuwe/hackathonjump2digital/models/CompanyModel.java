@@ -2,6 +2,8 @@ package com.nuwe.hackathonjump2digital.models;
 
 import javax.persistence.*;
 
+
+//    Tarea 1: Crear un base de datos (PostgreSQL, MySQL, Mongo, Firebase,etc) y guardar toda la lista de compañías utilizado siguiendo el esquema del JSON
 @Entity
 @Table(name = "company")
 public class CompanyModel {
