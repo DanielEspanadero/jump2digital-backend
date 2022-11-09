@@ -74,20 +74,20 @@ public class CompanyServiceImpl implements ICompany {
 
 
     private ArrayList<CompanyModel> ascendingCompaniesBySize(ArrayList<CompanyModel> companies){
-        Map<CompanyModel, Integer> dict = new HashMap();
+            Map<CompanyModel, Integer> dict = new HashMap();
 
-        for( CompanyModel c : companies){ // Por cada (Entidad : conjunto de entidades)
-            dict.put(c, toNumber(c.getSize()));
-        }
+            for (CompanyModel c : companies) { // Por cada (Entidad : conjunto de entidades)
+                dict.put(c, toNumber(c.getSize()));
+            }
 
-        Map<CompanyModel, Integer> sortedBySize = dict.entrySet()
-                .stream()
-                .sorted(Map.Entry.comparingByValue())
-                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+            Map<CompanyModel, Integer> sortedBySize = dict.entrySet()
+                    .stream()
+                    .sorted(Map.Entry.comparingByValue())
+                    .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
 
-        ArrayList<CompanyModel> orderedCompanies = new ArrayList<>(sortedBySize.keySet());
+            ArrayList<CompanyModel> orderedCompanies = new ArrayList<>(sortedBySize.keySet());
 
-        return orderedCompanies;
+            return orderedCompanies;
     }
 
 
@@ -111,8 +111,6 @@ public class CompanyServiceImpl implements ICompany {
 
     private void calculateTypesNumbers(ArrayList<CompanyModel> companies, HashMap<String, Integer> industryTypesMap){
         ArrayList<String> industries = new ArrayList<>();
-
-
 
         for(CompanyModel company: companies){
             if(company.getIndustry() == null){

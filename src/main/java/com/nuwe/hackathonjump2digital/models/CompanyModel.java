@@ -13,7 +13,7 @@ public class CompanyModel {
     @Column
     private String website;
 
-    @Column
+    @Column(unique = true)
     private String name;
 
     @Column
