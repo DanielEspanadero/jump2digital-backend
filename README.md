@@ -1,11 +1,10 @@
 # 👨🏻‍💻 Jump2Digital 2022 | Backend 👨🏻‍💻
 
-![Demo](img01)
+![Demo](https://github.com/DanielEspanadero/jump2digital-backend/blob/main/docs/img01.webp)
 
 _Aplicación creada para la clasificación de la hackathon de [Jump2Digital 2022](https://nuwe.io/dev/challenges/jump2digital2022-backend) - Backend organizada por [Nuwe](https://nuwe.io) utilizando Java con Spring._
 
-_Explicar funcionamiento_
-
+_A la hora de realizar la tarea he tomado la decisión de no realizar queries usando JPA y gestionarlo a través de lógica en la implementación del servicio ya que así aumenta el rendimiento evitando problemas de serialización por transformar código escrito en Java a código MySQL y usando solo código escrito en java._
 
 ## Objetivos 🎯
 
@@ -61,20 +60,20 @@ spring.datasource.password=
 spring.jpa.hibernate.ddl-auto=
 ```
 
-![Demo](img02)
+![Demo](https://github.com/DanielEspanadero/jump2digital-backend/blob/main/docs/img02.png)
 
 ## Endpoints ✍️
 
 _En la carpeta 'Postman' hay un JSON donde se pueden importar todos los datos directamente a Postman, pero si deseas añadirlo manualmente, puedes utilizar los siguientes endpoints:_
 
-![Demo](img04)
+![Demo](https://github.com/DanielEspanadero/jump2digital-backend/blob/main/docs/img04.png)
 
 ### POST - Guardar todas las compañías en la base de datos 👉🏻(Tarea 1)👈🏻
 ```
 http://localhost:8000/companies/all
 ```
 
-![Demo](img05)
+![Demo](https://github.com/DanielEspanadero/jump2digital-backend/blob/main/docs/img05.png)
 
 ### POST - Guardar una compañia en la base de datos (Extra)
 ```
@@ -103,7 +102,7 @@ http://localhost:8000/companies/general-information
 
 _La correcta organización de la estructura del proyecto evitará la duplicación de código, mejorará la estabilidad y ayudará a la escalabilidad. En esta ocasión me he decantado por crear un monolito modular con la finalidad de poder escalar el proyecto a microservicios en el caso de que fuera necesario_
 
-![Demo](img03)
+![Demo](https://github.com/DanielEspanadero/jump2digital-backend/blob/main/docs/img03.png)
 
 ## Versionado 📌
 
