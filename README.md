@@ -57,7 +57,7 @@ server.port=
 spring.datasource.url=
 spring.datasource.username=
 spring.datasource.password=
-spring.jpa.hibernate.ddl-auto=
+spring.jpa.hibernate.ddl-auto=update
 ```
 
 ![Demo](https://github.com/DanielEspanadero/jump2digital-backend/blob/main/docs/img02.png)

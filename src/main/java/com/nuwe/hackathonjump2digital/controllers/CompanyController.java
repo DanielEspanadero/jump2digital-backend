@@ -4,6 +4,8 @@ import com.nuwe.hackathonjump2digital.dto.GeneralCompanyInformationDTO;
 import com.nuwe.hackathonjump2digital.models.CompanyModel;
 import com.nuwe.hackathonjump2digital.services.bussinesslogic.impl.CompanyServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.RequestEntity;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -36,12 +38,15 @@ public class CompanyController {
     }
 
     @PostMapping
-    public void saveCompany(@RequestBody CompanyModel company){
-        this.companyService.saveCompany(company);
+    public ResponseEntity<String> saveCompany(@RequestBody CompanyModel company){
+            this.companyService.saveCompany(company);
+            return ResponseEntity.status(200).body("User added successfully! 🙂");
+
     }
 
     @PostMapping("/all")
-    public void saveAllCompanies(@RequestBody ArrayList<CompanyModel> companies){
-        this.companyService.saveAllCompanies(companies);
+    public ResponseEntity<String> saveAllCompanies(@RequestBody ArrayList<CompanyModel> companies){
+            this.companyService.saveAllCompanies(companies);
+            return ResponseEntity.status(200).body("All Users added successfully! 🙂");
     }
 }
